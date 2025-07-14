@@ -9,7 +9,8 @@
 - Opiniones que se muestran automaticas
 - Redes para contactar
 
-# Web 100% responsive (útil en todos los dispositivos desde computadora hasta celular)
+# Web 100% responsive
+(útil en todos los dispositivos desde computadora hasta celular)
 # PDF descargable
  Perfecta ortigrafía
 
