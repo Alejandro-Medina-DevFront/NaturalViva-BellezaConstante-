@@ -1,4 +1,4 @@
-# 🚀WEB UTILIZADA DE EJEMPLO DE  MI PRABAJO EN MI PORTAFOLIO🚀 
+# 🚀WEB UTILIZADA DE EJEMPLO DE  MI PRABAJO EN MI PORTAFOLIO
 
  Web que da presentacion online a una tienda de cosmeticos 100% naturales
 
