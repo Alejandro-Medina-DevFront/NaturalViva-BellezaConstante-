@@ -1,0 +1,473 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: rgba(201, 201, 201, 0.288);
+    color: rgb(17, 17, 17);
+    overflow-x: hidden;
+    width: 100%;
+    background: linear-gradient(135deg, #5a6e59, #f5fcf7);
+    overflow: hidden;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translate(0%, -10%)scale(0.95);
+    transition: all 2s ease-out;
+}
+
+.visible {
+    display: inline-block;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translate(-10% -10%)scale(1);
+    transition: all .5s ease;
+}
+
+header {
+    background-color: rgba(125, 151, 115);
+    color: rgb(216, 228, 211);
+    position: fixed;
+    width: 100vw;
+    height: clamp(100px, 12vw, 200px);
+    text-align: center;
+    box-shadow: -10px 10px 30px rgb(117, 117, 100);
+    border-bottom: 2px solid rgb(195, 218, 187);
+    z-index: 10;
+
+
+    h1 {
+        margin-bottom: clamp(3px, 10vh, 1px);
+        margin-top: 20px;
+        font-size: clamp(1.3rem, 3.5vw, 3rem);
+        text-shadow: 0px 0px 30px wheat;
+    }
+
+    h3 {
+        font-size: clamp(.5rem, 1.4vw, 2rem);
+        margin: 0%;
+        margin-bottom: 100px;
+    }
+}
+
+#etiquetas {
+    height: clamp(30px, 3vw, 50px);
+    background-color: rgb(162, 182, 154);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: clamp(1rem, 1vw, 2rem);
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    box-shadow: 0 -3px 15px rgba(245, 222, 179, 0.363);
+
+    a {
+        text-decoration: none;
+        color: rgb(63, 63, 63);
+        font-size: clamp(.55rem, 1.5vw, 2rem);
+        transition: all 0.5s ease;
+    }
+
+    a:hover {
+        color: rgb(27, 27, 27);
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
+}
+
+#presentacion {
+    margin-top: clamp(100px, 12vw, 200px);
+    height: 75vh;
+    border-top: 1px solid beige;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1rem, 2vw, 3rem);
+
+    h3 {
+        width: 80%;
+        margin-inline: auto;
+        color: rgb(50, 50, 50);
+    }
+
+}
+
+
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.card{
+    background-color: #ffffffdd;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    box-shadow: 3px 4px 10px rgb(0, 0, 0);
+}
+
+.card:hover{
+    transform: translateY(-5px);}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-header .icon{
+    font-size: 1.8rem;
+}
+
+.card h3{ font-size: 1.5rem;
+color: #2d4739;
+margin: 0%;}
+
+.card p{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4d4d4d;
+}
+
+@media(max-width: 768px){
+    .nosotros{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#secc-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    gap: auto;
+    row-gap: 100px;
+}
+
+.productos {
+    width: 60%;
+    margin-inline: AUTO;
+    border: 2px solid rgb(53, 80, 42);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background: linear-gradient(to bottom right, rgb(147, 173, 137) 30%, rgb(87, 109, 80)70%);
+    box-shadow: 0px 0px 30px black;
+    transition: all 0.7s ease;
+    font-size: clamp(0.5rem, 1vw, 2rem);
+    position: relative;
+    overflow: auto;
+    color: rgb(49, 49, 49);
+
+    a {
+        text-decoration: none;
+        color: rgb(63, 63, 63);
+        border: 2px double rgb(63, 63, 63);
+        border-radius: 5px;
+        padding: 4px;
+        margin-top: 20%;
+        transition: all 0.7s ease;
+        width: 50%;
+        flex: 1;
+        color:black;
+        background-color: rgb(135, 155, 128);
+    }
+
+    a:hover {
+        box-shadow: 0px 0px 10px black;
+    }
+
+    p {
+        margin-top: 0px;
+        height: 20%;
+        flex: 1;
+    }
+}
+
+.productos:hover {
+    transform: scale(1.1);
+    height: auto;
+    /* interpolate-size: allow-keywords; */
+    box-shadow: 0px 0px 40px rgb(0, 27, 0);
+    z-index: 0;
+}
+
+
+
+
+
+@media(max-width: 1000px) {
+    #secc-productos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 80px;
+
+    }
+
+    .productos {
+
+        height: auto;
+        font-size: clamp(0.5rem, 2vw, 2rem);
+        overflow: auto;
+
+        h1 {
+            font-size: clamp(0.5rem, 3.5vw, 2rem);
+            height: 10%;
+        }
+
+        p {
+            margin-bottom: 4vw;
+        }
+    }
+
+}
+
+.img {
+    height: 12vw;
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-inline: auto;
+}
+
+#producto-jabon {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(jabón.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#producto-serum {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(serum.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#producto-aceite {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(aceite.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#producto-crema {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(crema.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#producto-balsamo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(balsamo-coco.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#producto-exfoliante {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.164)),
+        url(exfoliante.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#text-prd {
+    color: rgb(53, 53, 53);
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgb(100, 121, 91);
+    border-top: 2px solid rgb(100, 121, 91);
+    background-color: rgba(125, 151, 115);
+    padding: 10px;
+    text-shadow: 0px 0px 10px rgb(54, 95, 8);
+}
+
+.comentarios {
+    width: clamp(30px, 60%, 1000px);
+    min-width: 350px;
+    margin-inline: auto;
+    margin-top: 100px;
+    text-align: center;
+   
+
+    h1 {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        width: 32%;
+        padding: 7px 5px 0 7px;
+        margin-inline: auto;
+        border: 2px dashed rgb(89, 160, 79);
+        border-bottom: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+.opinion {
+    text-align: start;
+    font-size: clamp(1rem, 1.5vw, 4rem);
+    background: linear-gradient(to bottom, rgb(247, 241, 230), rgb(141, 140, 137));
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.534);
+    border-radius: 2px;
+
+    legend {
+        text-align: start;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+footer {
+    background-color: rgb(81, 99, 74);
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    font-size: clamp(0.3rem, 0.8vw, 2rem);
+    border-top: 2px solid rgb(85, 107, 76);
+    margin-top: 50px;
+}
+
+#pdfYredes {
+    margin-top: 250px;
+    padding-inline: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#pdf {
+    text-align: center;
+    border: 1px solid rgb(63, 63, 63);
+    padding: 3%;
+    padding-bottom: 2%;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px rgb(32, 32, 27);
+    background: radial-gradient(circle,  rgb(67, 85, 60), rgb(118, 145, 108) ) ;
+    color: aliceblue;
+    transition: all 0.5s ease;
+
+    a {
+        text-decoration: none;
+        border: 1px solid ease;
+        color: aliceblue;
+        font-size: clamp(1rem, 1.7vw, 2rem);
+        background-color: rgb(56, 56, 56);
+        border-radius: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1% 3%;
+        border: 1px solid black;
+        transition: all 0.5s ease;
+    }
+
+    a:hover {
+        transform: scale(1.5);
+        background-color: rgb(95, 150, 95);
+    }
+
+    ul {
+        padding: 0%;
+    }
+
+    li {
+
+        list-style: none;
+        font-size: clamp(1rem, 1.4vw, 2rem);
+    }
+}
+
+#pdf:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+#redes {
+    display: flex;
+    align-items: center;
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    a {
+        color: rgb(39, 78, 37);
+    }
+}
+
+@media(max-width: 800px) {
+    #pdfYredes {
+        display: block;
+        width: 100%;
+        padding: 0%;
+    }
+
+    #pdf{width: 80%;
+    margin-inline: auto;}
+
+    #redes {
+        width: 100%;
+        margin-top: 40px;
+        margin-inline: auto;
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-inline: auto;
+            padding: 0%;
+            list-style: none;
+        }
+
+        li {
+            font-size: clamp(0.7rem, 2vw, 2rem);
+        }
+    }
+}
+
+.comentarios{position: relative;}
+.opinion{
+    position: absolute;
+    top: 10;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translatey(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.activa{display: block;
+opacity: 1;
+transform: translateX(0);}
